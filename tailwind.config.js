@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'denim': "url('./denim.webp')",
-        'leather': "url('./leather.webp')",
-        'fabric': "url('./fabric.webp')",
+        'denim': "url('./denim.jpg')",
+        'leather': "url('./leather.jpg')",
+        'fabric': "url('./fabric.jpg')",
       },
       fontFamily: {
         'inter' : ['inter', 'serif'],
