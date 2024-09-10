@@ -18,7 +18,7 @@ const updateAR = useStore((state) => state.updateAR)
 
 
 const handleClick = () => {
-  updateAR()
+  // updateAR()
   if(AR){
     store.destroy()
   } else
