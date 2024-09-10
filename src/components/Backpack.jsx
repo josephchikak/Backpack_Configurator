@@ -1,19 +1,20 @@
 
 import React, { useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
-import { useConfigurations } from '../contexts/Configurations'
+
 import useStore from '../utility/useStore'
-import { ARButton } from 'three/examples/jsm/webxr/ARButton.js'
-import { useThree } from '@react-three/fiber'
+import {XR, createXRStore} from '@react-three/xr'
+// import { ARButton } from 'three/examples/jsm/webxr/ARButton.js'
+// import { useThree } from '@react-three/fiber'
 
 
 export default function Backpack(props) {
 
-    const {gl} = useThree()
+    // const {gl} = useThree()
 
-    gl.xr.enabled =true
+    // gl.xr.enabled =true
 
-    document.body.appendChild( ARButton.createButton(gl))
+    // document.body.appendChild( ARButton.createButton(gl))
 
 
 
@@ -79,6 +80,7 @@ metalTextureProps.roughnessMap.flipY = false
 
   const { nodes, materials } = useGLTF('./model/backpack.glb')
   return (
+    <>
     <group {...props} dispose={null}>
         {/* <ambientLight intensity={1} /> */}
 
@@ -175,6 +177,8 @@ metalTextureProps.roughnessMap.flipY = false
 
       </mesh>
     </group>
+    </>
+
   )
 }
 

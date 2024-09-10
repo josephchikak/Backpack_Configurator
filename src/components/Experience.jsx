@@ -4,14 +4,19 @@ import Backpack from './Backpack'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import Configurator from './Configurator'
-import { ConfigurationsProvider } from '../contexts/Configurations'
+import { XR, createXRStore } from '@react-three/xr'
 
 const Experience = () => {
+
+const store = createXRStore()
+
   return (
     <>
     {/* <ConfigurationsProvider> */}
 
     <div className='h-[100vh] canvasContainer'>
+    <button onClick={() => store.enterAR()}>Enter AR</button>
+    <button onClick={() => store.enterAR()}>Enter AR</button>
         <Canvas 
          camera={{
             fov: 50,
@@ -19,11 +24,17 @@ const Experience = () => {
             far: 100,
             position: [ 0, 0, 2 ],
         }}> 
+        <XR store={store}>
+
         <ambientLight intensity={2}/>
              <OrbitControls enableZoom={false}/>
              <Backpack/>
+        </XR>
+
         </Canvas> 
         <Configurator/>
+
+  
 
     </div>
     {/* </ConfigurationsProvider> */}
