@@ -1,7 +1,6 @@
 
 import React, { useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
-
 import useStore from '../utility/useStore'
 import {XR, createXRStore} from '@react-three/xr'
 // import { ARButton } from 'three/examples/jsm/webxr/ARButton.js'

@@ -1,17 +1,8 @@
 import React from 'react'
-
 import useStore from '../utility/useStore'
-import { XR, createXRStore, } from '@react-three/xr'
-
-
-
-
 
 
 const Configurator = () => {
-
-const store = createXRStore()
-
 
 const AR  = useStore((state) => state.AR)
 const updateMaterial = useStore((state) => state.updateMaterial)
@@ -20,15 +11,6 @@ const updateMetalColor = useStore((state) => state.updateMetalColor)
 
 const updateAR = useStore((state) => state.updateAR)
 
-
-// const handleClick = () => {
-//     updateAR()
-//   }
-
-
-
-
-    // const {material, setMaterial} = useConfigurations()
 
   return (
     <div className='fixed font-[black] w-[100vw] h-[20px]  z-10 bottom-[30%] right-[0] mb-5'>
@@ -105,7 +87,6 @@ const updateAR = useStore((state) => state.updateAR)
 
         </div>
     </div>
-
 
 
     </div>
